@@ -1,6 +1,7 @@
 //JS ふぁずびず問題（JS）
 
-const myfunc = function fizzbuzz(){
+const myfunc = document.getElementById("myfunc");
+myfunc.addEventListener("click", function() {
 for (let i = 1; i <= 100; i++) {
 　 if(i % 15 === 0){
        document.write("FizzBuzz");
@@ -12,4 +13,4 @@ for (let i = 1; i <= 100; i++) {
       document.write(i);
    } document.write("</br>");
  }
-}
+});
