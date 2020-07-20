@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <title></title>
+<meta charset="utf-8">
+<title></title>
 </head>
-<body>
-  <h1>JSテスト</h1>
-  <input type="button" value="押すと関数起動" onclick="myfunc();">
-  <script>
-    const myfunc = function fizzbuzz(){
+  <body>
+    <h1>JSテスト</h1>
+    <input type="button" value="押すと関数起動" id="myfunc">
+    <script>
+    const myfunc = document.getElementById("myfunc");
+    myfunc.addEventListener("click", function() {
     for (let i = 1; i <= 100; i++) {
     　 if(i % 15 === 0){
            document.write("FizzBuzz");
@@ -18,9 +19,9 @@
             document.write("Fizz");
        } else {
           document.write(i);
-       }document.write("</br>");
+       } document.write("</br>");
      }
-    }
+    });
   </script>
-</body>
+  </body>
 </html>
