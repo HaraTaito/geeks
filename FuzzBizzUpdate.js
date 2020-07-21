@@ -2,7 +2,7 @@
 
 const myfunc = document.getElementById("myfunc");
 myfunc.addEventListener("click", function() {
-let num = document.getElementById("myfuncNum").value;
+const num = document.getElementById("myfuncNum").value;
   for (let i = 1; i <= num; i++) {
      if(num >= 1001){
           break;
