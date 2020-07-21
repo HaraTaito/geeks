@@ -5,8 +5,7 @@ myfunc.addEventListener("click", function() {
 let num = document.getElementById("myfuncNum").value;
   for (let i = 1; i <= num; i++) {
      if(num >= 1001){
-      document.write("1000以上は表示されません");
-      break;
+          break;
     }else if(i % 15 === 0){
          document.write("FizzBuzz");
      } else if (i % 5 === 0){
