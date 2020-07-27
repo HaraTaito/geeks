@@ -9,9 +9,24 @@
       <h3>※読み込みjsファイル名がふぁずびずになっているので注意※</h3>
       <span>直接書き込みでjsてすとなう(テスト後にspanタグに変更した)</span></br>
     <form action="FuzzBizzUpdate.js" method="post">
-      <input type="number" min="1" max="1000" id="myfuncNum" >
-      <button type="button" id="myfunc" >出力</button>
-    </form>
+      <div>
+        <fieldset>
+          <legend>出力設定</legend>
+            <input type="number" min="1" max="1000" id="myfuncNum" >
+            <button type="button" id="myfunc">出力</button>
+        </fieldset>
+      </div>
+      <div>
+          <fieldset>
+              <legend>出力結果</legend>
+                <div>
+                    <ul id="result">
+
+                    </ul>
+                </div>
+          </fieldset>
+      </div>
       <script type="text/javascript" src="FuzzBizzUpdate.js"></script>
+      </form>
     </body>
 </html>
