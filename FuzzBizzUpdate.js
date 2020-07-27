@@ -4,8 +4,8 @@ const myfunc = document.getElementById("myfunc");
 myfunc.addEventListener("click", function() {
 const num = document.getElementById("myfuncNum").value;
 document.getElementById('result').textContent = null; //リストの初期化
-const fizzNum = document.getElementById("Fizznum");
-const buzzNum = document.getElementById("Buzznum");
+const fizzNum = document.getElementById("Fizznum").value;
+const buzzNum = document.getElementById("Buzznum").value;
 for (let i = 1; i <= num; i++) {
     if(num >= 1001){
           break;
