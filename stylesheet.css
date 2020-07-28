@@ -6,7 +6,7 @@ fieldset{
 
 }
 legend{
-  background-color: green;
+  background-color: orange;
 }
 button{
    cursor: pointer;/*カーソル操作 */
@@ -20,4 +20,7 @@ button{
 button:active {
   transform: translateY(3px);/*下に動く*/
   border-bottom: none;/*線を消す*/
+}
+h1{
+  font-family:serif;
 }
