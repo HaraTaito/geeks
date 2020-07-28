@@ -13,7 +13,7 @@ for (let i = 1; i <= num; i++) {
           break;
     }else if(i % (fizzNum * buzzNum) === 0){
         const li = document.createElement('li'); //liノードを作成
-        li.textContent =　wordA + wordB;　//liに文字列を入れる
+        li.textContent = wordA + wordB;　//liに文字列を入れる
         document.getElementById('result').appendChild(li);//resultにliを追加。以下繰り返し
      } else if (i % buzzNum === 0){
         const li = document.createElement('li');
@@ -21,7 +21,7 @@ for (let i = 1; i <= num; i++) {
         document.getElementById('result').appendChild(li);
      } else if(i % fizzNum === 0){
         const li = document.createElement('li');
-        li.textContent =wordA;
+        li.textContent = wordA;
         document.getElementById('result').appendChild(li);
      }else {
         const li = document.createElement('li');
