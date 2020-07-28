@@ -27,3 +27,23 @@ h1{
 html{
   background-color: #DDDDDD;
 }
+.animeA{
+  animation: flash 0.8s linear infinite;
+  color:red;
+  margin:10px;
+}
+@keyframes flash {
+  0%,100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.animeB{
+  animation: flash 1s linear infinite;
+  color:blue;
+  margin:10px;
+}

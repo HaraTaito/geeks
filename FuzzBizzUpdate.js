@@ -17,10 +17,12 @@ for (let i = 1; i <= num; i++) {
         document.getElementById('result').appendChild(li);//resultにliを追加。以下繰り返し
      } else if (i % buzzNum === 0){
         const li = document.createElement('li');
+        li.className ='animeB';
         li.textContent = wordB;
         document.getElementById('result').appendChild(li);
      } else if(i % fizzNum === 0){
         const li = document.createElement('li');
+          li.className ='animeA';
         li.textContent = wordA;
         document.getElementById('result').appendChild(li);
      }else {
