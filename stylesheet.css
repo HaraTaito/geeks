@@ -1,3 +1,23 @@
 .form{
 display: block;
 }
+fieldset{
+  background-color:#FFCC33;
+
+}
+legend{
+  background-color: green;
+}
+button{
+   cursor: pointer;/*カーソル操作 */
+  display: inline-block;
+  padding: 0.5em 1em;
+  background: #668ad8;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 10px; /*ボタンの角*/
+}
+button:active {
+  transform: translateY(3px);/*下に動く*/
+  border-bottom: none;/*線を消す*/
+}
