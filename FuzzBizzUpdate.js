@@ -1,13 +1,13 @@
-//JS ふぁずびず問題（JS）
+JS ふぁずびず問題（JS）
 
 const myfunc = document.getElementById("myfunc");
 myfunc.addEventListener("click", function() {
-const num = document.getElementById("myfuncNum").value;
+const num = document.getElementById("myfuncNum").value;//完了
 document.getElementById('result').textContent = null; //リストの初期化
-const fizzNum = document.getElementById("Fizznum").value;
-const buzzNum = document.getElementById("Buzznum").value;
-const wordA = document.getElementById("wordA").value;
-const wordB = document.getElementById("wordB").value;
+const fizzNum = document.getElementById("Fizznum").value;//完了
+const buzzNum = document.getElementById("Buzznum").value;//完了
+const wordA = document.getElementById("wordA").value;//完了
+const wordB = document.getElementById("wordB").value;//完了
 for (let i = 1; i <= num; i++) {
     if(num >= 1001){
           break;
@@ -22,7 +22,7 @@ for (let i = 1; i <= num; i++) {
         document.getElementById('result').appendChild(li);
      } else if(i % fizzNum === 0){
         const li = document.createElement('li');
-          li.className ='animeA';
+        li.className ='animeA';
         li.textContent = wordA;
         document.getElementById('result').appendChild(li);
      }else {
