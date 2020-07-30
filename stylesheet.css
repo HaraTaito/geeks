@@ -46,3 +46,6 @@ html{
   color:blue;
   margin:10px;
 }
+.error-message{
+  color:red;
+}
