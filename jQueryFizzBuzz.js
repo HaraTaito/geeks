@@ -1,5 +1,6 @@
 $(function(){
   $('#myfunc').click(function(){
+    $('#result').empty();
     const myfuncNum = $('#myfuncNum').val(); //for文最大値　1000以上の時エラーメッセージを出すコーディング
     const fizzNum = $('#Fizznum').val(); //倍数A;
     const buzzNum = $('#Buzznum').val(); //倍数B;
@@ -8,13 +9,13 @@ $(function(){
 //エラーメッセージが一番外のif文。全部通ってfor文が起動
     if(myfuncNum ===''){
       $('#error-message0').text('※最大値を入力してください');
-      } else if(fizzNum ===''){
+    } else if(fizzNum ===''){
       $('#error-message1').text('※倍数Aを入力してください');
-      } else if(wordA ===''){
+    } else if(wordA ===''){
       $('#error-message2').text('※変化後の文字を入力してください');
-      } else if(buzzNum ===''){
+    } else if(buzzNum ===''){
       $('#error-message3').text('※倍数Bを入力してください');
-      } else if(wordB ===''){
+    } else if(wordB ===''){
       $('#error-message4').text('※変更後の文字を入力してください');
     } else {
         for(let i = 1; i <= myfuncNum; i++) {
@@ -22,7 +23,7 @@ $(function(){
             break;
           } else if(i % (fizzNum * buzzNum) ===0){
               const list = $('<li>');
-              list.html('公倍数');
+              list.html(wordA + wordB);
               $('#result').append(list);
           } else if(i % fizzNum ===0){
               const list = $('<li>');
@@ -39,6 +40,14 @@ $(function(){
           }
         }
       }
+  });
+
+  $('.form-delete').click(function(){
+    //入力フォームを含めた要素、たぶんdivごと削除
+  });
+
+  $('form-create').click(function(){
+    //入力フォームを含めた要素、たぶんdivごと追加
   });
 
 });
