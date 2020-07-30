@@ -1,4 +1,4 @@
-JS ふぁずびず問題（JS）
+//JS ふぁずびず問題（JS）
 
 const myfunc = document.getElementById("myfunc");
 myfunc.addEventListener("click", function() {
