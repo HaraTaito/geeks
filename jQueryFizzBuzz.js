@@ -44,13 +44,12 @@ $(function(){
 
   $('.form-delete').click(function(){
     //入力フォームを含めた要素、たぶんdivごと削除
-    $('.new-form').remove();
+    $(this).parent().remove();
   });
 
   $('.form-create').click(function(){
     //入力フォームを含めた要素、たぶんdivごと追加
-    $('.allform').append('<span >変化させる値：</span><input type="number" min="1" max="1000">');
-        $('.new-from').append('<button class="form-delete">削除</button>');
+    $('.btn').before('<div class="new-form"><span>変化させる値：</span><input type="number" min="1" max="1000"><span> 文字列：</span><input type="text"><button class="form-delete">削除</button></br></div>');
   });
 
 });
