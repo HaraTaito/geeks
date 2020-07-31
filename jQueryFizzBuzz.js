@@ -2,7 +2,7 @@ $(function(){
   $('#myfunc').click(function(){
     $('#result').empty();
     const myfuncNum = $('#myfuncNum').val(); //for文最大値　1000以上の時エラーメッセージを出すコーディング
-    const fizzNum = $('#Fizznum').val(); //倍数A;
+    const fizzNum = $('.new-form').children(); //倍数A;
     const buzzNum = $('#Buzznum').val(); //倍数B;
     const wordA = $('#wordA').val(); //Aの変換文字
     const wordB = $('#wordB').val(); //Bの変換文字
@@ -44,10 +44,13 @@ $(function(){
 
   $('.form-delete').click(function(){
     //入力フォームを含めた要素、たぶんdivごと削除
+    $('.new-form').remove();
   });
 
-  $('form-create').click(function(){
+  $('.form-create').click(function(){
     //入力フォームを含めた要素、たぶんdivごと追加
+    $('.new-from').append('<span >変化させる値：</span><input type="number" min="1" max="1000">');
+        $('.new-from').append('<button class="form-delete">削除</button>');
   });
 
 });
