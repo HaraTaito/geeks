@@ -26,6 +26,6 @@ $(function(){
   });
 
   $('.form-create').click(function(){
-    $('.btn').before('<div class="new-form"><span>変化させる値：</span><input　class="num" type="number" min="1" max="1000"><span> 文字列：</span><input class="text" type="text"><button class="form-delete">削除</button></br></div>');
+    $('.btn').before('<div class="new-form"><span>変化させる値：</span><input class="num" type="number" min="1" max="1000"><span> 文字列：</span><input class="text" type="text"><button class="form-delete">削除</button></br></div>');
   });
 });
