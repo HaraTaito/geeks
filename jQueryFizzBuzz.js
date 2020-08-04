@@ -2,9 +2,7 @@ $(function(){
   $('#myfunc').click(function(){
     $('#result').empty();//ボタンを押すごとにリストを空にする。リストの連続表示を防ぐ
       const myfuncNum = $('#myfuncNum').val();//for文最大値
-      const nums = $('.num').each(function(){
-        $('num').val();
-      });
+      const nums = $('.num').val();
       nums.each(function(){
         for(let i = 1; i <= myfuncNum; i++){
           if(myfuncNum >=1001 ){
