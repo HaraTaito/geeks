@@ -19,7 +19,7 @@ $(function(){
       //   a *= nums[i].value; //公倍数をaに先に入れて以下で使いやすくする
       // }
 
-        outside : for(let i = 1; i <= myfuncNum; i++){
+         for(let i = 1; i <= myfuncNum; i++){
           if(myfuncNum >=1001 ){
             break;
           } else{
@@ -28,17 +28,15 @@ $(function(){
                  const list = $('<li>');
                  list.html(textArray[j]);
                  $('#result').append(list);
-                 break outside;
               } else if(i % a === 0) {
                 const list = $('<li>');
                 list.html(textArray);
                 $('#result').append(list);
-                break outside;
               } else {
                 const list = $('<li>');
                 list.html(i);
                 $('#result').append(list);
-                break outside;
+
               }
             }
           }
