@@ -8,38 +8,38 @@ $(function(){
       const textArray = [];
       let a = 1;
 
-      for(i = 0; i < nums.length; i++) {
+      for(let i = 0; i < nums.length; i++) {
         numArray.push(nums[i].value);//配列って概念がfindにないからindexに順番に入れているらしい
       }
 
-      for(i = 0; i < texts.length; i++) {
+      for(let i = 0; i < texts.length; i++) {
         textArray.push(texts[i].value); //上記と同じ
       }
-      // for (i = 0; i < nums.length; i++) {
-      //   a *= nums[i].value; //公倍数をaに先に入れて以下で使いやすくする
-      // }
+       for (let i = 0; i < nums.length; i++) {
+        a *= nums[i].value; //公倍数をaに先に入れて以下で使いやすくする
+       }
 
-         for(let i = 1; i <= myfuncNum; i++){
-          if(myfuncNum >=1001 ){
-            break;
-          } else{
-            for(j = 0; j < nums.length; j++) {
-              if(i % nums[j].value ===0){
-                 const list = $('<li>');
-                 list.html(textArray[j]);
-                 $('#result').append(list);
-              } else if(i % a === 0) {
-                const list = $('<li>');
-                list.html(textArray);
-                $('#result').append(list);
-              } else {
-                const list = $('<li>');
-                list.html(i);
-                $('#result').append(list);
-
-              }
+      for(let i = 1; i <= myfuncNum; i++) {
+        if(myfuncNum >= 1001){
+          break;
+        }else {
+          for(let j = 0; j < nums.length; j++){
+            if(i % nums[j].value === 0){
+              const list = $('<li>');
+              list.html(textArray[j]);
+              $('#result').append(list);
+            }else if(i % a === 0) {
+              const list = $('<li>');
+              list.html(textArray.value);
+              $('#result').append(list);
+            }else {
+              const list = $('<li>');
+              list.html(i);
+              $('#result').append(list);
             }
+
           }
+        }
       }
 });
 
