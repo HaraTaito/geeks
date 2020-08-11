@@ -15,32 +15,26 @@ $(function(){
       for(let i = 0; i < texts.length; i++) {
         textArray.push(texts[i].value); //上記と同じ
       }
-       for (let i = 0; i < nums.length; i++) {
-        a *= nums[i].value; //公倍数をaに先に入れて以下で使いやすくする
-       }
 
       for(let i = 1; i <= myfuncNum; i++) {
         if(myfuncNum >= 1001){
           break;
-        }else {
-          for(let j = 0; j < nums.length; j++){
-            if(i % nums[j].value === 0){
-              const list = $('<li>');
-              list.html(textArray[j]);
-              $('#result').append(list);
-            }else if(i % a === 0) {
-              const list = $('<li>');
-              list.html(textArray.value);
-              $('#result').append(list);
-            }else {
-              const list = $('<li>');
-              list.html(i);
-              $('#result').append(list);
-            }
+        }
 
+        let flag = Boolean(false);
+            const list = $('<li>');
+          for(let j = 0; j < nums.length; j++){
+             if(i % nums[j].value === 0){
+               list.append(textArray[j]);
+               flag = Boolean(true);
           }
         }
-      }
+          if(flag ===false){
+            list.html(i);
+
+          }
+          $('#result').append(list);
+        }
 });
 
   $(document).on("click", '.form-delete', function () {
