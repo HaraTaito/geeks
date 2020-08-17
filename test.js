@@ -4,21 +4,21 @@ $(function(){
       const myfuncNum = $('#myfuncNum').val();//for文最大値
       let inputArray2 = [];
 
-      $('new-form').each(function(index, element){
-      const num2 = $('.new-form').find('.num');
-      const text2 = $('.new-form').find('.text');
+      $('.new-form').each(function(index, element){
+      const num2 = $(element).find('.num').val();
+      const text2 = $(element).find('.text').val();
       let rensou = {numKey2 : num2, textKey2 : text2}
 
-      inputArray.push(rensou);
+      inputArray2.push(rensou);
     });
 
-      for(let i = 1; i < myfuncNum; i++){
+      for(let i = 1; i <= myfuncNum; i++){
         let kakuninn = "";
 
         for(let j = 0; j < inputArray2.length; j++){
 
-          if(i % inputArray[j].numKey2 === 0){
-            kakuninn += inputArray[j].textKey2;
+          if(i % inputArray2[j].numKey2 === 0){
+            kakuninn += inputArray2[j].textKey2;
           }
         }
         if(kakuninn === ""){
