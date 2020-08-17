@@ -22,10 +22,10 @@ $(function(){
       }
         if(result ==="") {
           result = i;
-      }
+        }
             $('#result').append('<li>' + result + '</li>');
-  }
-});
+    }
+  });
 
   $(document).on("click", '.form-delete', function () {
     $(this).parent().remove();
