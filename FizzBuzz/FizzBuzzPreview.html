@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="stylesheet.css">
+  <title></title>
+</head>
+    <body>
+      <h1>フロント課題ふぃずばず表示</h1>
+      <h3>※読み込みjsファイル名がふぁずびずになっているので注意※</h3>
+      <div>
+        <fieldset class="allform">
+          <legend>出力設定</legend>
+            <div>
+              <div class="form">
+                <p id="error-message0" class="error-message"></p>
+                <span>for文最大値：</span><input type="number" min="1" max="1000" id="myfuncNum" >
+              </div>
+              <div class="new-form">
+                  <span >変化させる値：</span><input class="num" type="number" min="1" max="1000">
+                  <span>文字列：</span><input class="text" type="text">
+                  <button class="form-delete">削除</button>
+              </div>
+              <div class="btn">
+              <button type="button" id="myfunc">出力</button>
+              <button class="form-create" id="form-create">入力フォーム追加</button>
+              </div>
+            </div>
+        </fieldset>
+      </div>
+      <div>
+          <fieldset>
+              <legend>出力結果</legend>
+                <div>
+                    <ul id="result">
+
+                    </ul>
+                </div>
+          </fieldset>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script type="text/javascript" src="test.js"></script>
+    </body>
+</html>
