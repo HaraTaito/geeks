@@ -37,3 +37,14 @@ $(function(){
         $('.btn').before('<div class="new-form"><span>変化させる値：</span><input class="num" type="number" min="1" max="1000"><span> 文字列：</span><input class="text" type="text"><button class="form-delete">削除</button></br></div>');
       });
     });
+    for(let i = 1; i <= k; i++) {
+      if(moveA > moveB) {
+         X = X - D;
+          moveB = Math.abs(X - D);
+          moveA = Math.abs(X + D);
+      } else {
+        X = X + D;
+        moveA = Math.abs(X + D);
+        moveB = Math.abs(X - X);
+      }
+    }

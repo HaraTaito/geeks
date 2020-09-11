@@ -33,8 +33,3 @@ var app = new Vue({
     }
   }
 })
-
- // var rlt = new Vue({
- //   el: '#calc-result',
- //   data:
- // })
