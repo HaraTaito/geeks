@@ -10,8 +10,9 @@
     <header>
       <h2>電卓アプリ</h2>
     </header>
+    <div id="app">
     <div class="calc">
-    <table id="app" align="center"> <!--Vueと連携するために必要なid -->
+    <table align="center"> <!--Vueと連携するために必要なid -->
       <tr id="topn">
         <td colspan="3"><input type="text" v-model="output" class="form"></td><!--v-〇〇はディレクティブ。 -->
         <td><button id="C" v-on:click="calc('C')">C</button></td>
@@ -23,15 +24,16 @@
       </tr>
     </table>
   </div>
-  <div align="right">
+  <div class="result-view">
     <fieldset>
       <legend align="center">計算結果履歴</legend>
-        <ul>
-          <li id="calc-result" v-for="result in resultlist">
-          {{result.resultlist}}
+        <ul class="result">
+          <li v-for="result in resultlist">
+          {{result.calcResult}}
           </li>
         </ul>
     </fieldset>
+      </div>
   </div>
   <div class="footer">
     <div class="footer-list">

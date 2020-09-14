@@ -1,4 +1,4 @@
- Vue.config.devtools = true;
+ Vue.config.devtools = true;//chromeのデバッグ機能を使えるようにする
 
 var app = new Vue({
    el: '#app',
