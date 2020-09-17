@@ -1,0 +1,44 @@
+
+
+#app{
+    display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body{
+    margin:0%
+}
+ul{
+    list-style: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    color: slategrey;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+footer{
+    margin-top: auto;
+    background-color: silver;
+}
+
+.list{
+    padding-left:90%;
+    margin-bottom: 0%;
+    list-style: none;
+}
+
+.rink{
+    padding-bottom: 5%;
+}
+
+.create{
+    float: left;
+    padding-bottom: 10%;
+ 
+}

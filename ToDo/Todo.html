@@ -2,23 +2,67 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="ToDostyle.css">
     <title>Vue.js ToDoリスト</title>
   </head>
   <body>
+    <div class="main">
+    <div class="haeder">
+      <h2>タイトル</h2>
+
+    </div>
     <div id="app">
-      <input type="text" v-on:keyup.enter="addTodo" v-model="newTodoTitle">
+
+      <div>
+        <input type="text" v-on:keyup.enter="addTodo(); time()" v-model="newname"
+      placeholder="What your Name">
+      <input type="text" v-on:keyup.enter="addTodo(); time()" v-model="newTodoTitle"
+      placeholder="あなたの今後の予定は？">
         <ul>
-          <li v-for="todo in todos">
-            {{todo.id}} : {{todo.title}}
+          <li v-for="todo in todos" v-bind:class="{completed:todo.completed}"><!--リスト表示,bindでtrueになったらcompletedクラス追加-->
+            <div class="View"><!--以下リストの内部構成-->
+              <input class="tag"type="checkbox" v-model="todo.completed">
+              <label>{{todo.date}}:{{todo.name}}:{{todo.title}}</label>
+              <button class="removebtn" v-on:click="remove(index)">remove</button>
+            </div>
           </li>
         </ul>
-        <button v-on:click="addTodo" name="button">ToDo追加</button>
-    </div>
+        <button v-on:click="addTodo(); time();" name="button">ToDo追加</button>
+      </div>
+      <div class="todoTable">
+        <table border="1">
+          <tr>
+            <th>追加日</th>
+            <th>作成者</th>
+            <th>ToDo</th>
+            <th>詳細</th>
+          </tr>
+        </table>
+      </div>
+
+      <!-- <div class="filterlist">
+        <ul>
+          <li><button v-bind:class="{select: filter === 'all'}" v-on:click="filter = all">All</button></li>
+          <li><button v-bind:class="{select: filter === 'active'}" v-on:click="filter = active">Active</button></li>
+          <li><button v-bind:class="{select: filter === 'completed'}" v-on:click="filter = completed">Completed</button></li>
+        </ul>
+      </div> -->
+
+    </div><!-- app範囲 -->
+
+    <footer>
+        <ul class="list">
+          <li class="rink"><a href="#">会社概要</a></li>
+          <li class="rink"><a href="#">採用</a></li>
+          <li class="rink"><a href="#">お問い合わせ</a></li>
+        </ul>
+    </footer>
+
+  </div>
+    
 
 
-
-
-    <script src="C:\Users\pc\vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script><!--CDN-->
     <script src="ToDo.js"></script>
   </body>
 </html>
