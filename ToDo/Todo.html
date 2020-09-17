@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Vue.js ToDoリスト</title>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" v-on:keyup.enter="addTodo" v-model="newTodoTitle">
+        <ul>
+          <li v-for="todo in todos">
+            {{todo.id}} : {{todo.title}}
+          </li>
+        </ul>
+        <button v-on:click="addTodo" name="button">ToDo追加</button>
+    </div>
+
+
+
+
+    <script src="C:\Users\pc\vue.js"></script>
+    <script src="ToDo.js"></script>
+  </body>
+</html>
