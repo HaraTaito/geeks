@@ -4,9 +4,10 @@ var app = new Vue({
     data: {
       newTodoTitle: null,
       newname:"",
-      todos:[],
+      todos:[],//初期値でローカルデータ取得
       filter:'all',
-      addDate: ''
+      addDate: '',
+      viewtodo: []
     },
     computed: {
       //算出プロパティ。dataの拡張版のようなもの
@@ -32,11 +33,12 @@ var app = new Vue({
         }
         this.time();
         this.todos.push({title: this.newTodoTitle,　name: this.newname, date: this.addDate, completed:false});
-         localStorage.setItem('key', this.todos)//ここにローカルホスト保存メソッド
+        localStorage.setItem('todo', JSON.stringify(this.todos))//ローカルに保存
+        this.viewtodo = JSON.parse(localStorage.getItem('todo'));//todosにローカルのデータ代入
         this.newTodoTitle = null;
       },
       remove: function(index){
-        this.todos.splice(index, 1);//index番のtitleを1個消す
+        var item = JSON.parse(localStorage.getItem('todo'));//index番のtitleを1個消す
         //ここにlocalからデータを消すメソッド
       },
       time: function()  {
@@ -45,6 +47,10 @@ var app = new Vue({
         var month = date.getMonth() +1;
         var day = date.getDate();
         return this.addDate = year + '/' + month + '/' + day;
+      },
+      checkUpdate: function(){
+        this.todos = localStorage.setItem('todo', JSON.stringify(this.todos));
+        this.viewtodo = localStorage.setItem('todo', JSON.stringify(this.todos));
       }
       
     }

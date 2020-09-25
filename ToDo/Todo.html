@@ -18,26 +18,25 @@
       placeholder="What your Name">
       <input type="text" v-on:keyup.enter="addTodo(); time()" v-model="newTodoTitle"
       placeholder="あなたの今後の予定は？">
+      <button v-on:click="addTodo(); time();" name="button">ToDo追加</button>
+      <table border="1">
+        <tr>
+          <th>todoリスト一覧</th>
+        </tr>
+        <tr>
+          <td>
         <ul>
-          <li v-for="todo in todos" v-bind:class="{completed:todo.completed}"><!--リスト表示,bindでtrueになったらcompletedクラス追加-->
+          <li v-for="todo in viewtodo" v-bind:class="{completed:todo.completed}"><!--リスト表示,bindでtrueになったらcompletedクラス追加-->
             <div class="View"><!--以下リストの内部構成-->
-              <input class="tag"type="checkbox" v-model="todo.completed">
+              <input class="tag"type="checkbox" v-model="todo.completed" v-on:click="checkUpdate">
               <label>{{todo.date}}:{{todo.name}}:{{todo.title}}</label>
               <button class="removebtn" v-on:click="remove(index)">remove</button>
             </div>
           </li>
         </ul>
-        <button v-on:click="addTodo(); time();" name="button">ToDo追加</button>
-      </div>
-      <div class="todoTable">
-        <table border="1">
-          <tr>
-            <th>追加日</th>
-            <th>作成者</th>
-            <th>ToDo</th>
-            <th>詳細</th>
-          </tr>
-        </table>
+      </td>
+      </tr>
+      </table>
       </div>
 
       <!-- <div class="filterlist">
